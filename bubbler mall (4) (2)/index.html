@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+
+    <title>homepage</title>
+
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+
+    <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.css">
+
+    <link rel="stylesheet" href="assets/css/templatemo-hexashop.css">
+
+    <link rel="stylesheet" href="assets/css/owl-carousel.css">
+
+    <link rel="stylesheet" href="assets/css/lightbox.css">
+
+    <link rel="stylesheet" href="assets/css/normalize.css">
+
+
+
+
+
+    <style type="text/css">
+        #gallery-wrapper {
+            max-width: 75%;
+            width: 75%;
+            margin: 50px auto;
+        }
+        
+        img.thumb {
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+        }
+        
+        .white-panel {
+            background: white;
+            border-radius: 5px;
+            box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3);
+            padding: 10px;
+        }
+        
+        .white-panel h1 {
+            font-size: 1em;
+        }
+        
+        .white-panel h1 a {
+            color: #A92733;
+        }
+        
+        .white-panel:hover {
+            box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
+            margin-top: -5px;
+            -webkit-transition: all 0.3s ease-in-out;
+            -moz-transition: all 0.3s ease-in-out;
+            -o-transition: all 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out;
+        }
+        /*10.html*/
+        
+        .white-panel.hide,
+        .detail.hide {
+            opacity: 0;
+            pointer-events: none;
+            transform: translate(-50%, -50%) scale(0.9);
+        }
+        
+        .detail {
+            position: absolute;
+            top: 100%;
+            left: auto;
+            height: 900px;
+            width: 900px;
+            background: #fff;
+        }
+        
+        .bubble {
+            position: absolute;
+            transform: translate(0px, 0px) scale(1);
+            transition: transform 0.7s ease-out 0s;
+        }
+        
+        .bubble:before,
+        .bubble:after {
+            position: absolute;
+            left: 10px;
+            height: 10px;
+            width: 10px;
+            content: "";
+            background-color: inherit;
+            border-radius: 10px;
+            transform: rotate(-45deg);
+            transform-origin: 0 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- ***** click ***** -->
+    <div class="click"></div>
+
+    <!-- ***** Preloader Start ***** -->
+    <div id="preloader">
+        <div class="jumper">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    <!-- ***** Preloader End ***** -->
+
+
+    <!-- ***** Header Area Start ***** -->
+    <header class="header-area header-sticky">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="main-nav">
+                        <!-- ***** Logo Start ***** -->
+                        <a href="index.html" class="logo">
+                            <img src="assets/images/logo.png">
+                        </a>
+                        <!-- ***** Logo End ***** -->
+                        <!-- ***** Menu Start ***** -->
+                        <ul class="nav">
+                            <li class="scroll-to-section"><a href="index.html" class="active">BUBBLER Home</a></li>
+                            <li class="scroll-to-section"><a href="Bubble_pool.html">BUBBLER POOL</a></li>
+                            <li class="scroll-to-section"><a href="products.html">BUBBLER MALL</a></li>
+                            <li class="submenu">
+                                <a href="javascript:;">MY BUBBBLER</a>
+                                <ul>
+                                    <li><a href="loginres.html">LOG IN/REGISTER</a></li>
+                                    <li><a href="private_talking.html">PRIVATE CHAT</a></li>
+
+                                </ul>
+                            </li>
+                        </ul>
+                        <a class='menu-trigger'>
+                            <span>Menu</span>
+                        </a>
+                        <!-- ***** Menu End ***** -->
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ***** Header Area End ***** -->
+
+    <!-- ***** Main Banner Area Start ***** -->
+    <div class="page-heading" id="top">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="inner-content">
+                        <h2>BUBBlER</h2>
+                        <span>MAKE YOUR BUBBLER AS WELL AS NEW FRIENDS</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section id="gallery-wrapper">
+        <div class="detail hide">
+            <article>
+
+                <h1><a href="#">Title</a></h1>
+                <p>
+                <script language="javascript" type="text/javascript">
+                    var content="";
+                    var loc = location.href;
+                    var n1 = loc.length;
+                    var n2 = loc.indexOf("=");
+                    var id = decodeURI(loc.substr(n2+1, n1-n2));
+                    content += document.write(id)
+                    </script></p>
+
+            </article>
+        </div>
+        <article class="white-panel">
+            <img src="assets/images/service-01.png" class="thumb">
+            <h1><a href="#">Title 1</a></h1>
+            <p>Description 1</p>
+        </article>
+        <article class="white-panel">
+            <img src="assets/images/service-02.png" class="thumb">
+            <h1><a href="#">Title 2</a></h1>
+            <p>Description 2</p>
+        </article>
+        <article class="white-panel">
+            <img src="assets/images/service-03.png" class="thumb">
+            <h1><a href="#">Title 3</a></h1>
+            <p>Description 3</p>
+        </article>
+    </section>
+
+
+
+    <!-- ***** Main Banner Area End ***** -->
+
+
+
+    <!-- ***** Subscribe Area Starts ***** -->
+    <div class="subscribe">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg-4">
+                    <div class="row">
+                        <div class="col-6">
+                            <ul>
+                                <li>Company Location:<br><span>University Of Liverpool</span></li>
+                                <li>Phone:<br><span>8618991923611</span></li>
+                            </ul>
+                        </div>
+                        <div class="col-6">
+                            <ul>
+                                <li>Customer Service Online Hours:<br><span>mon-fri 11:00am-5:00pm</span></li>
+                                <li>Email:<br><span>2814037563@qq.com</span></li>
+                                <li>Social Media:<br><span><a href="#">Facebook</a>, <a href="#">Instagram</a>,  <a href="#">Linkedin</a></span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ***** Subscribe Area Ends ***** -->
+
+    <!-- ***** Footer Start ***** -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="first-item">
+                        <div class="logo">
+                            <img src="assets/images/white-logo.png" alt="hexashop ecommerce templatemo">
+                        </div>
+                        <ul>
+                            <li><a href="#">L69 3BX,UK</a></li>
+                            <p><b><a href="mailto:sglsong3@liverpool.ac.uk" style="color: white;">contact project manager:</a></b></p>
+                            <p><a href="mailto:sglsong3@liverpool.ac.uk" style="color: white;">sglsong3@liverpool.ac.uk</a></p>
+                            <li><a href="tel:07536943681" style="color: white;">07536943681</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <h4>BUBBLER store</h4>
+                    <ul>
+                        <li><a href="mailto:sgcjia4@liverpool.ac.uk">get our bank details and support us</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <h4>BUBBLER Links</h4>
+                    <ul>
+                        <li><a href="index.html">Homepage</a></li>
+                        <li><a href="contact.html">Visit our business offline</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <h4>Customer Service</h4>
+                    <ul>
+                        <p><b><a href="mailto:sgzxu38@liverpool.ac.uk" style="color: white;">contact Technical Engineer:</a></b></p>
+                        <p><a href="mailto:sgzxu38@liverpool.ac.uk" style="color: white;">sgzxu38@liverpool.ac.uk</a></p>
+                        <li><a href="tel:7536951069" style="color: white;">7536951069</a></li>
+                        <p><b><a href="mailto:sgcjia4@liverpool.ac.uk" style="color: white;">contact Maintenance specialists:</a></b></p>
+                        <p><a href="mailto:sgcjia4@liverpool.ac.uk" style="color: white;">sgcjia4@liverpool.ac.uk</a></p>
+                        <li><a href="tel:447536949916" style="color: white;">447536949916</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- jQuery -->
+
+    <script src="assets/js/jquery-1.11.0.min.js"></script>
+    <script src="assets/js/pinterest_grid.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            $("#gallery-wrapper").pinterest_grid({
+                no_columns: 5,
+                padding_x: 10,
+                padding_y: 10,
+                margin_bottom: 50,
+                single_column_breakpoint: 700
+            });
+
+        });
+    </script>
+
+    <script src="assets/js/jquery-2.1.0.min.js"></script>
+
+    <!-- Bootstrap -->
+    <script src="assets/js/popper.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+
+    <!-- Plugins -->
+    <script src="assets/js/owl-carousel.js"></script>
+    <script src="assets/js/accordions.js"></script>
+    <script src="assets/js/datepicker.js"></script>
+    <script src="assets/js/scrollreveal.min.js"></script>
+    <script src="assets/js/waypoints.min.js"></script>
+    <script src="assets/js/jquery.counterup.min.js"></script>
+    <script src="assets/js/imgfix.min.js"></script>
+    <script src="assets/js/slick.js"></script>
+    <script src="assets/js/lightbox.js"></script>
+    <script src="assets/js/isotope.js"></script>
+    <script src="assets/js/clickshow.js"></script>
+
+    <!-- Global Init -->
+    <script src="assets/js/custom.js"></script>
+
+    <script>
+        $(function() {
+            var selectedClass = "";
+            $("p").click(function() {
+                selectedClass = $(this).attr("data-rel");
+                $("#portfolio").fadeTo(50, 0.1);
+                $("#portfolio div").not("." + selectedClass).fadeOut();
+                setTimeout(function() {
+                    $("." + selectedClass).fadeIn();
+                    $("#portfolio").fadeTo(50, 1);
+                }, 500);
+
+            });
+        });
+    </script>
+
+</body>
+
+</html>

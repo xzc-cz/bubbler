@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+
+    <title>Hexashop - Product Detail Page</title>
+
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+
+    <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.css">
+
+    <link rel="stylesheet" href="assets/css/templatemo-hexashop.css">
+
+    <link rel="stylesheet" href="assets/css/owl-carousel.css">
+
+    <link rel="stylesheet" href="assets/css/lightbox.css">
+    <style>
+        #bubbles ul {
+            margin-top: 50px;
+        }
+        
+        #bubbles li {
+            width: 300px;
+            padding: 5px;
+            background-color: aqua;
+            color: black;
+            font-size: 14px;
+            margin: 15px 0;
+        }
+        
+        #bubbles li a {
+            float: right;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ***** Preloader Start ***** -->
+    <div id="preloader">
+        <div class="jumper">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    <!-- ***** Preloader End ***** -->
+
+
+    <!-- ***** Header Area Start ***** -->
+    <header class="header-area header-sticky">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="main-nav">
+                        <!-- ***** Logo Start ***** -->
+                        <a href="index.html" class="logo">
+                            <img src="assets/images/logo.png">
+                        </a>
+                        <!-- ***** Logo End ***** -->
+                        <!-- ***** Menu Start ***** -->
+                        <ul class="nav">
+                            <li class="scroll-to-section"><a href="index.html" class="active">BUBBLER Home</a></li>
+                            <li class="scroll-to-section"><a href="Bubble_pool.html">BUBBLER POOL</a></li>
+                            <li class="scroll-to-section"><a href="products.html">BUBBLER MALL</a></li>
+                            <li class="submenu">
+                                <a href="javascript:;">MY BUBBBLER</a>
+                                <ul>
+                                    <li><a href="loginres.html">LOG IN/REGISTER</a></li>
+                                    <li><a href="private_talking.html">PRIVATE CHAT</a></li>
+
+                                </ul>
+                            </li>
+                        </ul>
+                        <a class='menu-trigger'>
+                            <span>Menu</span>
+                        </a>
+                        <!-- ***** Menu End ***** -->
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ***** Header Area End ***** -->
+
+    <!-- ***** Main Banner Area Start ***** -->
+
+
+    <!-- ***** Main Banner Area End ***** -->
+
+
+
+
+    <div>
+        <ul id="bubbles">
+
+        </ul>
+    </div>
+
+
+    <div class="subscribe">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-heading">
+                        <h2>Add article</h2>
+                        <span>&nbsp;</span>
+                    </div>
+                    <form id="subscribe" method="post">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <fieldset>
+                                    Article's Title：<input name="title" type="text" id="title" placeholder="Please enter article's title">
+                                </fieldset>
+                            </div>
+
+                            <div class="col-lg-12">
+                                <fieldset>
+                                    Article's Content：<br/><textarea class="col-lg-textare" name="content" rows="6" type="text" id="content" placeholder="Please enter article's content"></textarea>
+                                </fieldset>
+                            </div>
+
+                            <div class="col-lg-12">
+                                <fieldset>
+                                    Publish Date：<input name="pub_date" type="text" id="pub_date" placeholder="Please enter article's pub_date">
+                                </fieldset>
+                            </div>
+
+                            <div class="col-lg-2">
+                                <fieldset>
+                                    <input type="submit" value="form-submit" onclick="test()" />
+                                    <SCRIPT LANGUAGE="JavaScript">
+                                        function test(){
+                                            var cont = document.getElementById("content");
+                                            location.href="index.html?"+"content="+encodeURI(cont.value);
+                                        }
+                                    </SCRIPT> 
+                                </fieldset>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ***** Product Area Starts ***** -->
+
+    <script>
+        //1.获取元素
+        var btn = document.querySelector('#form-submit');
+        var text = document.querySelector('#title');
+        var ul = document.querySelector('#bubbles');
+
+        //2.注册事件
+        btn.onclick = function() {
+            if (text.value == '') {
+                alert('Please enter a title')
+            } else {
+                //(1)创建元素
+                var li = document.createElement('li');
+                //先有元素才能赋值
+                li.innerHTML = text.value + '<a href="Bubble_pool.html">Contents</a>';
+                //(2)添加元素
+                // ul.appendChild(li);
+                ul.insertBefore(li, ul.children[0]);
+                //(3)删除元素 删除的是当前链接li的父级
+                var as = document.querySelectorAll('a');
+                for (var i = 0; i < as.length; i++) {
+                    as[i].onclick = function() {
+                        //node.removeChild(child);删除的是当前a所在的li
+                        // this.parentNode
+                        ul.removeChild(this.parentNode);
+                    }
+                }
+            }
+
+        }
+    </script>
+
+    <!-- ***** Product Area Ends ***** -->
+
+    <!-- ***** Footer Start ***** -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="first-item">
+                        <div class="logo">
+                            <img src="assets/images/white-logo.png" alt="hexashop ecommerce templatemo">
+                        </div>
+                        <ul>
+                            <li><a href="#">L69 3BX,UK</a></li>
+                            <p><b><a href="mailto:sglsong3@liverpool.ac.uk" style="color: white;">contact project manager:</a></b></p>
+                            <p><a href="mailto:sglsong3@liverpool.ac.uk" style="color: white;">sglsong3@liverpool.ac.uk</a></p>
+                            <li><a href="tel:07536943681" style="color: white;">07536943681</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <h4>BUBBLER store</h4>
+                    <ul>
+                        <li><a href="mailto:sgcjia4@liverpool.ac.uk">get our bank details and support us</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <h4>BUBBLER Links</h4>
+                    <ul>
+                        <li><a href="index.html">Homepage</a></li>
+                        <li><a href="contact.html">Visit our business offline</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <h4>Customer Service</h4>
+                    <ul>
+                        <p><b><a href="mailto:sgzxu38@liverpool.ac.uk" style="color: white;">contact Technical Engineer:</a></b></p>
+                        <p><a href="mailto:sgzxu38@liverpool.ac.uk" style="color: white;">sgzxu38@liverpool.ac.uk</a></p>
+                        <li><a href="tel:7536951069" style="color: white;">7536951069</a></li>
+                        <p><b><a href="mailto:sgcjia4@liverpool.ac.uk" style="color: white;">contact Maintenance specialists:</a></b></p>
+                        <p><a href="mailto:sgcjia4@liverpool.ac.uk" style="color: white;">sgcjia4@liverpool.ac.uk</a></p>
+                        <li><a href="tel:447536949916" style="color: white;">447536949916</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- jQuery -->
+    <script src="assets/js/jquery-2.1.0.min.js"></script>
+
+    <!-- Bootstrap -->
+    <script src="assets/js/popper.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+
+    <!-- Plugins -->
+    <script src="assets/js/owl-carousel.js"></script>
+    <script src="assets/js/accordions.js"></script>
+    <script src="assets/js/datepicker.js"></script>
+    <script src="assets/js/scrollreveal.min.js"></script>
+    <script src="assets/js/waypoints.min.js"></script>
+    <script src="assets/js/jquery.counterup.min.js"></script>
+    <script src="assets/js/imgfix.min.js"></script>
+    <script src="assets/js/slick.js"></script>
+    <script src="assets/js/lightbox.js"></script>
+    <script src="assets/js/isotope.js"></script>
+    <script src="assets/js/quantity.js"></script>
+
+    <!-- Global Init -->
+    <script src="assets/js/custom.js"></script>
+
+    <script>
+        $(function() {
+            var selectedClass = "";
+            $("p").click(function() {
+                selectedClass = $(this).attr("data-rel");
+                $("#portfolio").fadeTo(50, 0.1);
+                $("#portfolio div").not("." + selectedClass).fadeOut();
+                setTimeout(function() {
+                    $("." + selectedClass).fadeIn();
+                    $("#portfolio").fadeTo(50, 1);
+                }, 500);
+
+            });
+        });
+    </script>
+
+</body>
+
+</html>
